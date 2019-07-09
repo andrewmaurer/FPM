@@ -1,4 +1,4 @@
-# Flower Power Maurer's Repo
+# FPM Repo
 
 Here's code I've used several times and will probably use again. I'm putting it on github for the following reasons:
 
