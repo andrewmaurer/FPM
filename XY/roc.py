@@ -27,11 +27,13 @@ def compute_auc(y_pred, y_actual):
         return rectangle_areas.sum()
 
 
-def plot_auc(y_pred, y_actual):
+def plot_auc(y_pred, y_actual, include_change=True):
         thresholds = np.arange(0,1,0.01)
         fprs = [ fpr(y_pred, y_actual, threshold) for threshold in thresholds]
         tprs = [tpr(y_pred, y_actual, threshold) for threshold in thresholds]
-        plt.plot(fprs, tprs)        
+        plt.plot(fprs, tprs)  
+        if include_change:
+                plt.plot([0,1], [0,1], color='orange')      
         
         
 y_actual = np.array([0] * 75 + [1] * 100)
@@ -44,4 +46,4 @@ tpr( y_pred, y_actual, 0.5)
 fpr( y_pred, y_actual, 0.5)
 
 compute_auc(y_pred, y_actual)
-plot_auc(y_pred, y_actual)
+plot_auc(y_pred, y_actual, include_change=True)
