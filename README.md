@@ -14,4 +14,8 @@ Here's code I've used several times and will probably use again. I'm putting it 
 
 ## XY : Graphing
 
+### ROC
+
+Plot and compute ROC AUC. I've found sklearn's plotting of ROC AUC underwhelming so I'd rather call my own function.
+
 # TODO
